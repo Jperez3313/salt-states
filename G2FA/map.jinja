@@ -1,0 +1,10 @@
+{% set me = salt['grains.filter_by']({
+    'Debian': {
+        'package':  'libpam-google-authenticator', 
+    },
+    'RedHat': {
+        'package':  'google-authenticator', 
+    },
+}, grain='os_family') %}
+
+    
